@@ -57,9 +57,9 @@ setopt nolistbeep
 setopt ignore_eof            # Don't logout by C-d
 setopt extended_glob
 #setopt auto_cd              # 'cd' by directory name
-#setopt no_unset             # 未定義変数使用禁止
-setopt shwordsplit           # 変数を引数にしたとき、スペースで区切られる
-setopt globsubst             # 変数中のワイルドカードとか、展開
+#setopt no_unset             # Don't use undeclared variable
+setopt shwordsplit           # Split variable by space shell in shell arguments
+setopt globsubst             # Expand wildcard in variable
 setopt brace_ccl             # Expand {a-z} expression
 setopt printeightbit         # Print 8th bit
 #setopt printexitvalue       # Print exit code
@@ -69,14 +69,14 @@ setopt list_packed
 setopt no_flow_control       # Ignore C-q, C-s
 setopt mark_dirs             # Add "/" to end if matches directories
 setopt numeric_glob_sort     # Numeric sort
-#setopt magic_equal_subst    # =以降でも補完できるようにする( --prefix=/usrのような )
+#setopt magic_equal_subst    # Enable completion after "=" e.g. --prefix=/usr
 
-#補完
+# Completion
 compctl -g '*.pdf' + -/ acroread
 compctl -g '*.zip' unzip
 compctl -g '*.lzh' lha
 
-zstyle ':completion:*:default' menu select=1 # 補完侯補をEmacsのキーバインドで動き回る
+zstyle ':completion:*:default' menu select=1 # Use emacs keybind in completions
 
 #env
 export GREP_OPTIONS="--color=auto"
@@ -89,22 +89,22 @@ alias   r='emacs -nw --read-only'
 
 alias   cdp='cd -P .'
 alias   ..='cd ..'
-alias   cd..='cd ..'  # 空気を読んでくれるように
-alias   lcd='cd'      # 空気を読んでくれるように
-alias   kess='less'   # 空気を読んでくれるように
-alias   les='less'    # 空気を読んでくれるように
-alias   ess='less'    # 空気を読んでくれるように
+alias   cd..='cd ..'  # For typo
+alias   lcd='cd'      # For typo
+alias   kess='less'   # For typo
+alias   les='less'    # For typo
+alias   ess='less'    # For typo
 alias   cp='cp -i'
 #alias   defdiff="`which diff`"
 #alias   diff='colordiff'
 alias   cdiff='colordiff'
 alias   h='history 1'
 alias   ls='ls -CFG -x'
-alias   ks='ls'         # 空気を読んでくれるように
+alias   ks='ls'       # For typo
 alias   ll='ls -la'
-alias   kk='ll'         # 空気を読んでくれるように
+alias   kk='ll'       # For typo
 alias   l='ls -l'
-alias   k='l'         # 空気を読んでくれるように
+alias   k='l'         # For typo
 alias   rm='rm -i'
 alias   ,,='popd'
 alias   mv='mv -i'
