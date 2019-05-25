@@ -166,3 +166,11 @@ bindkey "^x\t" magic-abbrev-expand
 #stty erase "^?"
 
 
+# ---GCP SDK---
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tosi/tools/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/tosi/tools/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tosi/tools/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/tosi/tools/google-cloud-sdk/completion.zsh.inc'; fi
+# ---GCP SDK---
+
