@@ -174,3 +174,5 @@ if [ -f '/Users/tosi/tools/google-cloud-sdk/path.zsh.inc' ]; then source '/Users
 if [ -f '/Users/tosi/tools/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/tosi/tools/google-cloud-sdk/completion.zsh.inc'; fi
 # ---GCP SDK---
 
+alias python='python3.7'
+alias pip='pip3.7'
