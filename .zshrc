@@ -176,3 +176,5 @@ if [ -f '/Users/tosi/tools/google-cloud-sdk/completion.zsh.inc' ]; then source '
 
 alias python='python3.7'
 alias pip='pip3.7'
+
+export PATH=$HOME/.nodebrew/current/bin:$PATH
