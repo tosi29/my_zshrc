@@ -174,7 +174,15 @@ if [ -f '/Users/tosi/tools/google-cloud-sdk/path.zsh.inc' ]; then source '/Users
 if [ -f '/Users/tosi/tools/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/tosi/tools/google-cloud-sdk/completion.zsh.inc'; fi
 # ---GCP SDK---
 
-alias python='python3.7'
-alias pip='pip3.7'
+#alias python='python3.7'
+#alias pip='/Library/Frameworks/Python.framework/Versions/3.7/bin/pip3.7'
 
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PYENV_ROOT=${HOME}/.pyenv
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH=${PYENV_ROOT}/bin:$PATH
+    eval "$(pyenv init -)"
+fi
+
+export PATH=$HOME/.nodebrew/current/bin:$HOME/bin:$PATH
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
